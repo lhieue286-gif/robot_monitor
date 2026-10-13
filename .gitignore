@@ -1,0 +1,15 @@
+# Catkin / CMake output
+build/
+devel/
+install/
+logs/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+compile_commands.json
+
+# Editor and OS files
+.vscode/
+.idea/
+*.swp
+.DS_Store
