@@ -1,0 +1,127 @@
+<launch>
+
+    <!-- ========================= -->
+    <!-- Robot 1                   -->
+    <!-- ========================= -->
+    <group ns="robot1">
+
+        <!-- 机器人模拟器 -->
+        <node
+            pkg="robot_monitor"
+            type="robot_simulator_node"
+            name="robot_simulator"
+            output="screen">
+
+            <param
+                name="robot_id"
+                value="1" />
+
+            <param
+                name="max_linear_speed"
+                value="1.0" />
+
+            <param
+                name="max_angular_speed"
+                value="0.8" />
+
+            <param
+                name="publish_rate"
+                value="10.0" />
+
+            <param
+                name="initial_battery"
+                value="100.0" />
+
+            <param
+                name="low_battery_threshold"
+                value="20.0" />
+
+        </node>
+
+
+        <!-- 机器人 TCP 客户端 -->
+        <node
+            pkg="robot_monitor"
+            type="robot_tcp_client_node"
+            name="robot_tcp_client"
+            output="screen">
+
+            <param
+                name="robot_id"
+                value="1" />
+
+            <param
+                name="server_ip"
+                value="127.0.0.1" />
+
+            <param
+                name="server_port"
+                value="8080" />
+
+        </node>
+
+    </group>
+
+        <!-- ========================= -->
+    <!-- Robot 2                   -->
+    <!-- ========================= -->
+    <group ns="robot2">
+
+        <!-- 机器人模拟器 -->
+        <node
+            pkg="robot_monitor"
+            type="robot_simulator_node"
+            name="robot_simulator"
+            output="screen">
+
+            <param
+                name="robot_id"
+                value="2" />
+
+            <param
+                name="max_linear_speed"
+                value="1.0" />
+
+            <param
+                name="max_angular_speed"
+                value="0.8" />
+
+            <param
+                name="publish_rate"
+                value="10.0" />
+
+            <param
+                name="initial_battery"
+                value="100.0" />
+
+            <param
+                name="low_battery_threshold"
+                value="20.0" />
+
+        </node>
+
+
+        <!-- 机器人 TCP 客户端 -->
+        <node
+            pkg="robot_monitor"
+            type="robot_tcp_client_node"
+            name="robot_tcp_client"
+            output="screen">
+
+            <param
+                name="robot_id"
+                value="2" />
+
+            <param
+                name="server_ip"
+                value="127.0.0.1" />
+
+            <param
+                name="server_port"
+                value="8080" />
+
+        </node>
+
+    </group>
+
+</launch>

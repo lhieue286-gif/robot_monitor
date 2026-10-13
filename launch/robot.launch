@@ -1,0 +1,16 @@
+<launch>
+
+    <node pkg="robot_monitor" 
+    type="robot_simulator" 
+    name="robot_simulator" 
+    output="screen">
+    <!-- pkg 表示节点在哪个ROS package 中 type 表示节点的可执行文件名 name 表示在ROS 中这个节点叫什么名字 -->
+
+        <rosparam
+            command="load"
+            file="$(find robot_monitor)/config/robot.yaml" /> 
+            <!-- 启动机器人之前，把 robot.yaml 加载到 ROS Parameter Server。 -->
+
+    </node>
+
+</launch>
