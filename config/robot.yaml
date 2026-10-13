@@ -1,0 +1,9 @@
+robot_id: 1
+
+max_linear_speed: 1.0                # 最大线速度，单位为米/秒
+max_angular_speed: 0.8               # 最大角速度，单位为弧度/秒
+
+publish_rate: 10.0                   # 发布机器人状态的频率，单位为赫兹
+
+initial_battery: 100.0               # 初始电量百分比
+low_battery_threshold: 20.0          # 低电量阈值百分比，当电量低于该值时，机器人状态将显示为低电量
